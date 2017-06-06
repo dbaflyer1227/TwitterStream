@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JHSLoginViewController" customModule="TwitterStream" customModuleProvider="target">
+            <connections>
+                <outlet property="streamButton" destination="ohZ-Mg-ZJ4" id="xPj-Y0-2Me"/>
+                <outlet property="tryAgainButton" destination="rif-TD-mGF" id="gJD-xB-85L"/>
+                <outlet property="twitterName" destination="Mzg-bV-ytg" id="5hJ-nB-QVq"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rCK-7a-6Tj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzg-bV-ytg" customClass="JHSLabelRoundBordered" customModule="TwitterStream" customModuleProvider="target">
+                    <rect key="frame" x="16" y="20" width="205" height="66"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="cDx-Fe-uIX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohZ-Mg-ZJ4" customClass="JHSButtonRoundBordered" customModule="TwitterStream" customModuleProvider="target">
+                    <rect key="frame" x="112" y="94" width="109" height="94"/>
+                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="94" id="5g7-g0-r7Y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" title="Continue">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="afterSuccess:" destination="-1" eventType="touchUpInside" id="P12-j1-42B"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rif-TD-mGF" customClass="JHSButtonRoundBordered" customModule="TwitterStream" customModuleProvider="target">
+                    <rect key="frame" x="112" y="196" width="109" height="94"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="94" id="fbI-7q-Iyq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" title="Try Again">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tryAgain:" destination="-1" eventType="touchUpInside" id="ew7-9o-gCW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ohZ-Mg-ZJ4" firstAttribute="top" secondItem="Mzg-bV-ytg" secondAttribute="bottom" constant="8" symbolic="YES" id="0LR-c8-m9g"/>
+                <constraint firstItem="rif-TD-mGF" firstAttribute="top" secondItem="ohZ-Mg-ZJ4" secondAttribute="bottom" constant="8" id="5Zt-iX-LPm"/>
+                <constraint firstItem="Mzg-bV-ytg" firstAttribute="trailing" secondItem="ohZ-Mg-ZJ4" secondAttribute="trailing" id="HrM-mj-lRz"/>
+                <constraint firstItem="Mzg-bV-ytg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Qet-BZ-rFG"/>
+                <constraint firstItem="ohZ-Mg-ZJ4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="6.5" id="aYV-m7-L2g"/>
+                <constraint firstItem="ohZ-Mg-ZJ4" firstAttribute="trailing" secondItem="rif-TD-mGF" secondAttribute="trailing" id="ef9-lx-N8U"/>
+                <constraint firstItem="ohZ-Mg-ZJ4" firstAttribute="leading" secondItem="rif-TD-mGF" secondAttribute="leading" id="ma7-Ph-Qx7"/>
+                <constraint firstItem="Mzg-bV-ytg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="poQ-xb-lgY"/>
+            </constraints>
+            <point key="canvasLocation" x="-44" y="19"/>
+        </view>
+    </objects>
+</document>
